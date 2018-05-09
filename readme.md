@@ -25,6 +25,41 @@ parse(input)
   })
 ```
 
+Example parsed output:
+
+```
+{
+  "attachments": [ ... ],
+  "headers": { ... },
+  "html": "<!DOCTYPE html>\n<html>...</html>",
+  "text": "...",
+  "textAsHtml": "<p>...</p>",
+  "subject": "Example email subject",
+  "date": "2018-05-09T14:17:02.000Z",
+  "to": {
+    "value": [
+      {
+        "address": "fischxxxx@gmail.com",
+        "name": "Travis Fischer"
+      }
+    ],
+    "html": "<span class=\"mp_address_name\">Travis Fischer</span> &lt;<a href=\"mailto:fischxxxx@gmail.com\" class=\"mp_address_email\">fischxxxx@gmail.com</a>&gt;",
+    "text": "Travis Fischer <fischxxxx@gmail.com>"
+  },
+  "from": {
+    "value": [
+      {
+        "address": "courses@theblockchainacademy.com",
+        "name": "Bryant Nielson"
+      }
+    ],
+    "html": "<span class=\"mp_address_name\">Bryant Nielson</span> &lt;<a href=\"mailto:courses@theblockchainacademy.com\" class=\"mp_address_email\">courses@theblockchainacademy.com</a>&gt;",
+    "text": "Bryant Nielson <courses@theblockchainacademy.com>"
+  },
+  "messageId": "<01.B3.11399.ED203FA5@momentum1-mta1>"
+}
+```
+
 
 ## API
 
