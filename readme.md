@@ -2,7 +2,7 @@
 
 > Parses mime-encoded email messages.
 
-[![NPM](https://img.shields.io/npm/v/parse-email.svg)](https://www.npmjs.com/package/parse-email) [![Build Status](https://travis-ci.org/transitive-bullshit/parse-email.svg?branch=master)](https://travis-ci.org/transitive-bullshit/parse-email) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/parse-email.svg)](https://www.npmjs.com/package/parse-email) [![Build Status](https://travis-ci.com/transitive-bullshit/parse-email.svg?branch=master)](https://travis-ci.com/transitive-bullshit/parse-email) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 ## Install
