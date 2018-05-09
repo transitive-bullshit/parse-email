@@ -1,6 +1,6 @@
 {
   "name": "parse-email",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Parses mime-encoded email messages.",
   "main": "index.js",
   "repository": "transitive-bullshit/parse-email",
