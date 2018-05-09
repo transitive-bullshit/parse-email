@@ -56,7 +56,7 @@ Example parsed output:
     "html": "<span class=\"mp_address_name\">Bryant Nielson</span> &lt;<a href=\"mailto:courses@theblockchainacademy.com\" class=\"mp_address_email\">courses@theblockchainacademy.com</a>&gt;",
     "text": "Bryant Nielson <courses@theblockchainacademy.com>"
   },
-  "messageId": "<01.B3.11399.ED203FA5@momentum1-mta1>"
+  "messageId": "<01.B3.11399.xxxxxxxx@momentum1-mta1>"
 }
 ```
 
