@@ -1,0 +1,538 @@
+Delivered-To: fisch0920@gmail.com
+Received: by 2002:a4f:8541:0:0:0:0:0 with SMTP id h62-v6csp5380412ivd;
+        Wed, 9 May 2018 07:17:04 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZrF0GMORb2NzNredlsbvctHfpiEcerEAJnl3zr6e2lzqAv/weSXSUU3sfajsgRrbfZQleC3
+X-Received: by 2002:ac8:1808:: with SMTP id q8-v6mr43332788qtj.332.1525875423944;
+        Wed, 09 May 2018 07:17:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1525875423; cv=none;
+        d=google.com; s=arc-20160816;
+        b=l7Dr6bTFHl8J+K81PBeZVqkcrea4YDYMrhoJFcVLSIrbLE8e4gGfd4xM28+hiV8u1X
+         yDRROlh5Kr+uJRWC5GrxbSvcRwUH++eSqDRhdgh6BOTTP3wtON4uQJNstM5YvyYTdUV/
+         LRcCQMakwK2HIMzKFr2HC2eQ9Kej/dkUp3MsXZicJ/s1MwWOJEisp4zXSuMfF1eg1GEy
+         iLAXjyZOqvdn9M44sIx01mvUs5bR+xelyJNB77GrDoNCDKDne+ZaZhrPlTjV5QOYiQ+6
+         LbaDhS/7nDinux4L+leexF8S0TiA0WouswKtS6zTY0kJmCRTLhWJXf+YA3m4hQmiqyXh
+         JBdw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:subject:list-unsubscribe:feedback-id
+         :require-recipient-valid-since:x_id:to:from:mime-version:message-id
+         :date:dkim-signature:arc-authentication-results;
+        bh=2QDTA71P4m6MwET2lp1MimZ+Qbb4QiFT0gMob+IRYRY=;
+        b=HyNNSWLDewSdL0qHZW2YREXxYvxjr1GPH4VQn8XUXRhVG64EsbpLdLOcqd2B/RP6F4
+         ikRuOv1dF9xcyN88zjXOFhmqMpVILewgKcH3+ItmWE63mZ7RGaS1oPA37OX118cO+lA1
+         lAiu8tLLyVAYXYwO0ExAzlaKXETxZpR3iF7SOEAVX4IPFbXcypck7oK/jboqImc781F0
+         y/HZXvV8nMskEymtL4OjymcY/CL0fQkBwXLHd05XU0Dk/s1XG+5k7+3GU0Sn0TKsTdfv
+         eam8v9LM1PCYAO113Xgq4dqx93IGgkTd9bcsf5Y31OEDZqe0cJKkXxLIf37QzJgxv2hE
+         BXdg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@aweber.com header.s=20171212-2048-0c00cfd4 header.b=JKeA/7cD;
+       spf=pass (google.com: domain of ljyczewc7ltstcymjkyc7lrgtmycbjxmbjzs@smtp-soi-g18-153.aweber.com designates 204.194.223.153 as permitted sender) smtp.mailfrom=LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs@smtp-soi-g18-153.aweber.com
+Return-Path: <LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs@smtp-soi-g18-153.aweber.com>
+Received: from smtp-soi-g18-153.aweber.com (smtp-soi-g18-153.aweber.com. [204.194.223.153])
+        by mx.google.com with ESMTPS id r1-v6si3083075qvj.213.2018.05.09.07.17.03
+        for <fisch0920@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 09 May 2018 07:17:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ljyczewc7ltstcymjkyc7lrgtmycbjxmbjzs@smtp-soi-g18-153.aweber.com designates 204.194.223.153 as permitted sender) client-ip=204.194.223.153;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@aweber.com header.s=20171212-2048-0c00cfd4 header.b=JKeA/7cD;
+       spf=pass (google.com: domain of ljyczewc7ltstcymjkyc7lrgtmycbjxmbjzs@smtp-soi-g18-153.aweber.com designates 204.194.223.153 as permitted sender) smtp.mailfrom=LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs@smtp-soi-g18-153.aweber.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aweber.com;
+	s=20171212-2048-0c00cfd4; t=1525875422;
+	bh=2QDTA71P4m6MwET2lp1MimZ+Qbb4QiFT0gMob+IRYRY=;
+	h=Date:Content-Type:MIME-Version:From:To:List-Unsubscribe:Subject:
+	 Sender;
+	b=JKeA/7cDFGbu2iTpaPGBlS57zw1EffLevDiviXreBEhXYhaSXqM3159gLwvF/n2zS
+	 lQAF2G32jo61aViU4F4w2+15slKI8uHWZQqT+hEQ+0lQoeypdkvblUgN2xtMnSyLVt
+	 mQkuKLOkeWNK8MMAxNKtRI9Em/Fe/2Xa7acLN6HiJy1KUedofT+ZokiBLhGMqfxkDg
+	 qQXBstA4RpqYadEQ9osC2s8YNbTZRw9piImIDwxCUh0HFBctcwylzTAUY9lJfEeG7w
+	 tEDP7B5hbKHRs3kP/3HawpWOWBTl2bLmp8Q7pNjQieLv/RDDEESteYpbsTm0heMa4n
+	 VtbTLrmDqi5oA==
+Date: Wed, 09 May 2018 10:17:02 -0400
+Message-ID: <01.B3.11399.ED203FA5@momentum1-mta1>
+Content-Type: multipart/alternative; boundary="===============7421255528271407034=="
+MIME-Version: 1.0
+X-Loop: awlist4993287@aweber.com
+From: "Bryant Nielson" <courses@theblockchainacademy.com>
+X-AWMessage: cff1fe62-bc19-46da-9063-57e0f5adc4b0
+To: "Travis Fischer" <fisch0920@gmail.com>
+X_Id: 4993287:05-09-2018-10-09-06:fisch0920@gmail.com
+Require-Recipient-Valid-Since: fisch0920@gmail.com;
+ Tue, 03 Apr 2018 21:28:10 +0000
+Feedback-ID: A1248665:L4993287:M05-09-2018-10-09-06:AWeber
+List-Unsubscribe: <mailto:awlist4993287@aweber.com?subject=unsubscribe;LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs>,
+ <http://www.aweber.com/z/r/?LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs>
+X-Subscription: Subscribed on 04/03/2018, via Import, by None
+Subject: 5 days left to Register - Blockchain Developers Boot Camp
+X-Mailer: AWeber Composer 2.5.13
+Sender: Bryant Nielson <courses=theblockchainacademy.com@send.aweber.com>
+
+--===============7421255528271407034==
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Image
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DxO.Bs1OgII=
+kzSxYLkGfSnw
+
+Blockchain Developers Boot Camp
+The Blockchain Academy has created an intensive course outline that transfo=
+rms existing programmers into full blockchain developers.  It is an intensi=
+ve 6-week course that will allow for you to take advantage of these massive=
+ compensation packages.  When was the last time that 6-weeks can change you=
+r professional career?
+
+=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8BOur course s=
+yllabus is available for you to review here.
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DntQu0xPS9n=
+VhTgDFj5h0SQ
+
+Next class starts:  May 21st - Jun 29th 2018
+Registration Deadline is in 5 days
+Venue: NJ Blockchain Center,  Englewood Cliffs NJ  (15 minutes from NYC)
+
+                                                        REGISTRATION DEADLI=
+NE:  May15th, 2018
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DntQu0xPS9n=
+VhTgDFj5h0SQ
+
+    TBA Blockchain Boot Camp Video
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DntQu0xPS9n=
+VhTgDFj5h0SQ
+
+Blockchain Developers are in HIGH DEMAND
+Blockchain Developers are in high demand.  One report has identified that t=
+here are currently 5,000 blockchain developers with a global need for over =
+500,000 by 2020. A recent review of LinkedIn showed that there were 1,383 o=
+pen positions for Blockchain Developers.  That breaks down to the following=
+ distribution:
+
+Worldwide:       1,383
+United States:     461
+              NYC:     107
+                 SF:     105
+United Kingdom: 148
+
+Blockchain Market Salaries in New York as of March 30, 2018
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3D4WNr4R5dRt=
+d1Ji1OKVPKvQ
+
+
+$80,000+ (266)
+$105,000+ (220)
+$120,000+ (165)
+$130,000+ (125)
+$145,000+ (58)
+
+Freelance Jobs with an emphasis on Blockchain, as of March 30, 2018
+
+US Average Freelancer Rate: $117.98 p/hour (18)
+UK Average Freelancer Rate: =C2=A3114.25 p/hour (8)
+Global Freelancer Rate: $73.11 p/hour (38)
+
+In a recent podcast, the guest indicated that they were aware of some freel=
+ance consultants that were getting $250 p/hour.
+
+                                                        Learn More | Regist=
+er
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DHzZmXq58aU=
+Ix8919MqOx9Q
+
+
+
+    Image
+
+http://clicks.aweber.com/y/ct/?l=3D905dW&m=3DgYYUnYYtrf5vycc&b=3DxO.Bs1OgII=
+kzSxYLkGfSnw
+Regards,
+
+The Blockchain Academy
+400 Sylvan Avenue #105
+Englewood Cliffs NJ 07632
+USA
+
+To unsubscribe or change subscriber options, visit:
+http://www.aweber.com/z/r/?LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs
+
+
+--===============7421255528271407034==
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html>
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml">
+<head>
+<title>5 days left to Register - Blockchain Developers Boot Camp </title>
+<style type=3D"text/css">
+v:* { behavior: url(#default#VML); display: inline-block; }
+#aweber_container table {
+    text-align: left !important;
+}
+#aweber_rem {
+    margin: 0 !important;
+    text-align: left !important; =
+
+    padding-left: 0 !important;
+}
+.paragraph {
+  font-size: 12px;
+}
+
+.headline {
+  font-size: 30px;
+  color:#000000;
+  padding:0;
+}
+
+body {
+  max-width:600px;
+  background-color:#ffffff;
+  font-family: Arial, sans-serif;
+  color:#000000;
+  font-size: 12px;
+}
+
+table {
+  border:none;
+}
+
+.button tr td {
+  padding:0;
+}
+
+.follow-me tr td {
+  padding:0;
+}
+
+.article {
+  color:#000000;
+}
+
+.article .headline {
+  color:#000000;
+}
+
+.article .paragraph {
+  color:#000000;
+}
+
+.article .headline .link {
+  color:#000000;
+}
+
+.article .text {
+  color:#000000;
+}
+
+.article .permalink {
+  color:#000000;
+}
+
+center > div {
+  box-sizing: border-box;
+ }
+
+/* Removes unwanted borders around hyperlinked images */
+a img {
+  border:0;
+  outline:none;
+  text-decoration:none;
+}
+
+img {
+  height:auto!important;
+  max-width:100%!important;
+}
+
+/* Smaller Screens & Devices */
+@media only screen and (min-width:10px) and (max-width: 500px) {
+  html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    }
+
+  table {
+    width:100%;
+    }
+
+  .headline {
+    font-size:24px!important;
+    }
+
+  .paragraph {
+    font-size:16px!important;
+    }
+
+  .share img {
+    width:20px!important;
+    height:auto!important;
+    display:inline-block;
+    }
+  td {
+    display: block!important;
+    width:100%!important;
+    box-sizing: border-box;
+    }
+  .mobile-padding {
+    padding-left:10px;
+    padding-right:10px;
+    }
+  img {
+    height:auto!important;
+    max-width:100%!important;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<center>
+<div align=3D"center"><table align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"border-width: medium; border-style: none;">
+  <tbody><tr>
+    <td align=3D"left" width=3D"100%" class=3D"mobile-padding" style=3D"min=
+-width: 100%; ">
+      <!--[if !mso]><!--><table align=3D"left" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"max-width: 600px; border-width: medium; bor=
+der-style: none;"><!--<![endif]-->
+      <!--[if gte mso 9]><table align=3D"left" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"600"><![endif]-->
+        <tbody><tr>
+          <td bgcolor=3D"#fff" class=3D"aw-bgc">
+            <div align=3D"left" class=3D"aw-bgc" style=3D"color: rgb(0, 0, =
+0); font-family: Arial, sans-serif; min-width: 100%; background-color: rgb(=
+255, 255, 255);">
+              <div class=3D"region"><div aw-contents=3D"1"><table class=3D"=
+row" style=3D"width: 100%; border-width: medium; border-style: none;" role=
+=3D"presentation"><tbody><tr aw-contents=3D"1"><td aw-attributes=3D"width, =
+valign" class=3D"container" style=3D"padding: 0px; width: 33%;" aw-contents=
+=3D"1" width=3D"33%" valign=3D"top"><div class=3D"definition-parent"><span>=
+<table align=3D"center" width=3D"100%" class=3D"floated-none" style=3D"floa=
+t: none; text-align: center; border-width: medium; border-style: none;"
+role=3D"presentation"><tbody><tr><td style=3D"padding: 0px 0px 12px 0px;">
+    =
+
+    <a class=3D"aw-image-link" href=3D"http://clicks.aweber.com/y/ct/?l=3D9=
+05dW&amp;m=3DgYYUnYYtrf5vycc&amp;b=3DxO.Bs1OgIIkzSxYLkGfSnw">
+    =
+
+        <img align=3D"center" class=3D"model" border=3D"0" aw-attributes=3D=
+"src,alt,width,height" style=3D"margin: auto; width: 500px; height: auto; b=
+order-width: 0px; border-style: none; outline-width: medium; outline-style:=
+ none; text-decoration: none; max-width: 100%;" src=3D"https://hostedimages=
+-cdn.aweber-static.com/MTI0ODY2NQ=3D=3D/original/7c6929c56192409aa6642fc4da=
+1ba1cc.png" alt=3D"Image" width=3D"500" height=3D"57">
+    =
+
+    </a>
+    =
+
+</td></tr></tbody></table></span></div><div class=3D"definition-parent"><di=
+v class=3D"paragraph" style=3D"font-size: 12px;"><div aw-variable=3D"value"=
+><h3 style=3D"text-align:center"><span style=3D"font-size:24px">Blockchain =
+Developers Boot Camp</span></h3><p>The Blockchain Academy has created an in=
+tensive course outline that transforms existing programmers into full block=
+chain developers. &nbsp;It is an <em><u>intensive 6-week course</u></em> th=
+at will allow for you to take advantage of these massive
+compensation packages. &nbsp;When was the last time that 6-weeks can change=
+ your professional career?</p><p><br></p><p style=3D"text-align:center"><sp=
+an style=3D"font-size:18px"><strong>=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=
+=80=8B=E2=80=8B=E2=80=8BOur course syllabus is available for you to <a data=
+-cke-saved-href=3D"http://clicks.aweber.com/y/ct/?l=3D905dW&amp;m=3DgYYUnYY=
+trf5vycc&amp;b=3DntQu0xPS9nVhTgDFj5h0SQ" href=3D"http://clicks.aweber.com/y=
+/ct/?l=3D905dW&amp;m=3DgYYUnYYtrf5vycc&amp;b=3DntQu0xPS9nVhTgDFj5h0SQ" clas=
+s=3D"validating">review here.</a></strong></span><br><br><strong><span styl=
+e=3D"color:#30a542"><span style=3D"font-size:20px">Next
+class starts:&nbsp; May 21st - Jun 29th 2018</span></span></strong></p><p s=
+tyle=3D"text-align:center"><strong><span style=3D"color:#b93936"><span styl=
+e=3D"font-size:20px">Registration Deadline is in 5&nbsp;days</span></span><=
+/strong><br><span style=3D"font-size:16px">Venue: NJ Blockchain Center,&nbs=
+p;&nbsp;Englewood Cliffs NJ&nbsp; (15 minutes&nbsp;from NYC)</span></p><p><=
+br></p></div></div></div><div class=3D"definition-parent">
+                    <table class=3D"aw-button" width=3D"100%" role=3D"prese=
+ntation" style=3D"border-width: medium; border-style: none;">
+                        <tbody><tr>
+                            <td style=3D"padding:10px">
+                                <table width=3D"100%" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-width: me=
+dium; border-style: none;">
+                                    <tbody><tr>
+                                        <td align=3D"center">
+                                            <table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-width: mediu=
+m; border-style: none;">
+                                                <tbody><tr>
+                                                    <td align=3D"center" st=
+yle=3D"-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: =
+5px;" bgcolor=3D"#30A542">
+                                                        <!--[if mso]>&nbsp;=
+<![endif]--><a href=3D"http://clicks.aweber.com/y/ct/?l=3D905dW&amp;m=3DgYY=
+UnYYtrf5vycc&amp;b=3DntQu0xPS9nVhTgDFj5h0SQ" target=3D"_blank" style=3D"fon=
+t-size: 15px; font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; te=
+xt-decoration: none; text-decoration: none; -webkit-border-radius: 5px; -mo=
+z-border-radius: 5px; border-radius: 5px; padding: 8px 14px; border: 1px so=
+lid #30A542; display: inline-block;"><span style=3D"font-size: 15px; font-f=
+amily: Helvetica, Arial,
+sans-serif; color: #FFFFFF;">REGISTRATION DEADLINE:  May15th, 2018</span></=
+a>
+                                                        <!--[if mso]>&nbsp;=
+<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div><div class=3D"definition-parent"><span><table align=
+=3D"center" width=3D"100%" class=3D"floated-none" style=3D"float: none; tex=
+t-align: center; border-width: medium; border-style: none;" role=3D"present=
+ation"><tbody><tr><td style=3D"padding: 0px 0px 12px 0px;">
+    =
+
+    <a class=3D"aw-image-link" href=3D"http://clicks.aweber.com/y/ct/?l=3D9=
+05dW&amp;m=3DgYYUnYYtrf5vycc&amp;b=3DntQu0xPS9nVhTgDFj5h0SQ">
+    =
+
+        <img align=3D"center" class=3D"model" border=3D"0" aw-attributes=3D=
+"src,alt,width,height" style=3D"margin: auto; width: 600px; height: auto; b=
+order-width: 0px; border-style: none; outline-width: medium; outline-style:=
+ none; text-decoration: none; max-width: 100%;" src=3D"https://hostedimages=
+-cdn.aweber-static.com/MTI0ODY2NQ=3D=3D/optimized/64dbd50a39124f7eaf0f687c1=
+dc4f17e.jpeg" alt=3D"TBA Blockchain Boot Camp Video" width=3D"600" height=
+=3D"341">
+    =
+
+    </a>
+    =
+
+</td></tr></tbody></table></span></div><div class=3D"definition-parent"><di=
+v class=3D"paragraph" style=3D"font-size: 12px;"><div aw-variable=3D"value"=
+><div><h3 style=3D"text-align: center;"><span style=3D"font-size:24px">Bloc=
+kchain Developers are in HIGH&nbsp;DEMAND</span></h3><p>Blockchain Develope=
+rs are in high demand. &nbsp;One report has identified that there are curre=
+ntly 5,000 blockchain developers with a global need for over 500,000 by 202=
+0.&nbsp;A recent review of LinkedIn showed that there were
+1,383 open positions for Blockchain Developers. &nbsp;That breaks down to t=
+he following distribution:&nbsp;<br><br>Worldwide: &nbsp; &nbsp; &nbsp; 1,3=
+83<br>United States: &nbsp; &nbsp; 461<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NYC: &nbsp; &nbsp; 107<br>&nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SF: &nbsp; &nbsp=
+; 105<br>United Kingdom: 148<br><br>Blockchain Market Salaries in New York =
+as of March 30, 2018<br><a
+data-cke-saved-href=3D"http://clicks.aweber.com/y/ct/?l=3D905dW&amp;m=3DgYY=
+UnYYtrf5vycc&amp;b=3D4WNr4R5dRtd1Ji1OKVPKvQ" href=3D"http://clicks.aweber.c=
+om/y/ct/?l=3D905dW&amp;m=3DgYYUnYYtrf5vycc&amp;b=3D4WNr4R5dRtd1Ji1OKVPKvQ" =
+class=3D"validating">https://www.indeed.com/jobs?q=3Dblockchain&amp;l=3D100=
+18</a><br>&nbsp;<br>$80,000+ (266)<br>$105,000+ (220)<br>$120,000+ (165)<br=
+>$130,000+ (125)<br>$145,000+ (58)<br><br>Freelance Jobs with an emphasis o=
+n Blockchain, as of March 30, 2018<br>&nbsp;<br>US Average Freelancer Rate:=
+ $117.98 p/hour (18)<br>UK Average Freelancer Rate: =C2=A3114.25 p/hour
+(8)<br>Global Freelancer Rate: $73.11 p/hour (38)<br><br>In a recent podcas=
+t, the guest indicated that they were aware of some freelance consultants t=
+hat were getting $250 p/hour.</p></div></div></div></div><div class=3D"defi=
+nition-parent">
+                    <table class=3D"aw-button" width=3D"100%" role=3D"prese=
+ntation" style=3D"border-width: medium; border-style: none;">
+                        <tbody><tr>
+                            <td style=3D"padding:10px">
+                                <table width=3D"100%" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-width: me=
+dium; border-style: none;">
+                                    <tbody><tr>
+                                        <td align=3D"center">
+                                            <table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-width: mediu=
+m; border-style: none;">
+                                                <tbody><tr>
+                                                    <td align=3D"center" st=
+yle=3D"-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: =
+5px;" bgcolor=3D"#E32622">
+                                                        <!--[if mso]>&nbsp;=
+<![endif]--><a href=3D"http://clicks.aweber.com/y/ct/?l=3D905dW&amp;m=3DgYY=
+UnYYtrf5vycc&amp;b=3DHzZmXq58aUIx8919MqOx9Q" target=3D"_blank" style=3D"fon=
+t-size: 15px; font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; te=
+xt-decoration: none;
+text-decoration: none; -webkit-border-radius: 5px; -moz-border-radius: 5px;=
+ border-radius: 5px; padding: 8px 14px; border: 1px solid #E32622; display:=
+ inline-block;"><span style=3D"font-size: 15px; font-family: Helvetica, Ari=
+al, sans-serif; color: #FFFFFF;">Learn More | Register</span></a>
+                                                        <!--[if mso]>&nbsp;=
+<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div><div class=3D"definition-parent"><div class=3D"paragr=
+aph" style=3D"font-size: 12px;"><div aw-variable=3D"value"><div><span style=
+=3D"font-size:24px">&nbsp;</span></div></div></div></div><div class=3D"defi=
+nition-parent"><span><table align=3D"center" width=3D"100%" class=3D"floate=
+d-none" style=3D"float: none; text-align: center; border-width: medium; bor=
+der-style: none;" role=3D"presentation"><tbody><tr><td style=3D"padding: 0p=
+x 0px 12px 0px;">
+    =
+
+    <a class=3D"aw-image-link" href=3D"http://clicks.aweber.com/y/ct/?l=3D9=
+05dW&amp;m=3DgYYUnYYtrf5vycc&amp;b=3DxO.Bs1OgIIkzSxYLkGfSnw">
+    =
+
+        <img align=3D"center" class=3D"model" border=3D"0" aw-attributes=3D=
+"src,alt,width,height" style=3D"margin: auto; width: 600px; height: auto; b=
+order-width: 0px; border-style: none; outline-width: medium; outline-style:=
+ none; text-decoration: none; max-width: 100%;" src=3D"https://hostedimages=
+-cdn.aweber-static.com/MTI0ODY2NQ=3D=3D/optimized/e724b728d5514b06a74d0a8a9=
+1426870.jpeg" alt=3D"Image" width=3D"600" height=3D"249">
+    =
+
+    </a>
+    =
+
+</td></tr></tbody></table></span></div></td></tr></tbody></table></div></di=
+v>
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<div style=3D"clear: both!important;"></div></div>
+</center>
+<center>
+<div style=3D"background-color:#ffffff !important; color:#000000 !important=
+; font-family:Verdana !important; font-size:10px !important; max-width:600p=
+x; padding:8px !important; text-align:left; width:100%;">
+Regards,<br>
+<br>
+The Blockchain Academy<br/>
+400 Sylvan Avenue #105<br>
+Englewood Cliffs NJ 07632<br>
+USA<br/>
+<br/>
+<a href=3D"http://www.aweber.com/z/r/?LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs"=
+ style=3D"color: #00f !important;">Unsubscribe</a> | <a href=3D"http://www.=
+aweber.com/z/r/?LJyczEwc7LTsTCyMjKyc7LRGtMycbJxMbJzs" style=3D"color: #00f =
+!important;">Change Subscriber Options</a>
+<br/><br/><img src=3D"https://openrate.aweber.com/y/o/?l=3D905dW&m=3DgYYUnY=
+Ytrf5vycc" width=3D"1" height=3D"1">
+</div>
+</center>
+</body>
+</html>
+--===============7421255528271407034==--

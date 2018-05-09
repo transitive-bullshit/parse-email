@@ -1,0 +1,28 @@
+{
+  "name": "parse-email",
+  "version": "0.0.0",
+  "description": "Parses mime-encoded email messages.",
+  "main": "index.js",
+  "repository": "transitive-bullshit/parse-email",
+  "author": "Travis Fischer <travis@automagical.ai>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava -v && standard"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "parse",
+    "email",
+    "multipart"
+  ],
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "@nodemailer/mailparser2": "^1.0.3",
+    "ow": "^0.3.0"
+  }
+}
