@@ -27,7 +27,7 @@ parse(input)
 
 Example parsed output:
 
-```
+```json
 {
   "attachments": [ ... ],
   "headers": { ... },
@@ -90,3 +90,5 @@ Mime-encoded email string to parse.
 Note: this module relies on [@nodemailer/mailparser2](https://yarnpkg.com/en/package/@nodemailer/mailparser2) which has a more restrictive license.
 
 MIT © [Travis Fischer](https://github.com/transitive-bullshit)
+
+Support my OSS work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
